@@ -36,8 +36,8 @@ public class TextBoxExample {
         clearText.clear();
 
         //05)Retrive the typed text
-        WebElement retriver = driver.findElement(By.id("j_idt88:j_idt97"));
-        retriver.getAttribute("value");
+        WebElement retriver1 = driver.findElement(By.id("j_idt88:j_idt97"));
+        retriver1.getAttribute("value");
 
         //06) Type email and tab.Confirm control moved to next element.
         driver.findElement(By.id("j_idt88:j_idt99")).sendKeys("bhasarindu@gmail.com" + Keys.TAB + "Confirmed control moved to next element");
