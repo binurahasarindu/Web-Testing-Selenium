@@ -5,7 +5,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class ButtonExample {
-    public class LinkExample {
+
         WebDriver driver;
 
         @BeforeMethod
@@ -18,11 +18,17 @@ public class ButtonExample {
         @Test
         public void buttonTests(){
          // 01).click and confirm title
-            driver.findElement(By.id())
-
+            driver.findElement(By.xpath("//button[@id='j_idt88:j_idt90']")).click();
+            String expectedTitle = "Dashboard";
+            String actualTitle = driver.getTitle();
+            if(expectedTitle.equals(actualTitle)){
+                System.out.println("Actual Title  expected");
+            } else {
+                System.out.println("Actual Title  not same as  expected");
+            }
 
         }
 
-     }
+
 
 }
